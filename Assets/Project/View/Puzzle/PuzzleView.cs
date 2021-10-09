@@ -71,6 +71,7 @@ public class PuzzleView : MonoBehaviour
             PuyoColor.yellow => YellowPuyoSprite,
             PuyoColor.green => GreenPuyoSprite,
             PuyoColor.purple => PurplePuyoSprite,
+            _ => null
         };
 
     }
