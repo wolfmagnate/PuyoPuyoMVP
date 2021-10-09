@@ -73,7 +73,6 @@ public class PuzzleView : MonoBehaviour
             PuyoColor.purple => PurplePuyoSprite,
             _ => null
         };
-
     }
 
     public static Vector2 GetScreenPosition(Vector2Int value)

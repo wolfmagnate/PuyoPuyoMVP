@@ -40,19 +40,26 @@ public class PuyoView : MonoBehaviour
     private void Delete(Unit unit)
     {
         selectAnimation.Kill();
+        StartCoroutine(deleteCoroutine());
+    }
+
+    IEnumerator deleteCoroutine()
+    {
+        GetComponent<Image>().DOFade(0, presenter.animationTime);
+        yield return new WaitForSeconds(presenter.animationTime + 0.1f);
         Destroy(gameObject);
     }
 
     private void Match(Unit unit)
     {
         selectAnimation.Kill();
-        GetComponent<RectTransform>().DOScale(2 * Vector3.one, 0.5f);
         StartCoroutine(matchCoroutine());
     }
 
     IEnumerator matchCoroutine()
     {
-        yield return new WaitForSeconds(0.6f);
+        GetComponent<RectTransform>().DOScale(2 * Vector3.one, presenter.animationTime);
+        yield return new WaitForSeconds(presenter.animationTime + 0.1f);
         Destroy(gameObject);
     }
 
