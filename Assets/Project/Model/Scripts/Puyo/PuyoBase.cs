@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-
 public abstract class PuyoBase
 {
     public abstract bool IsSameColor(PuyoBase other);
