@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public static class Model
 {
     // 設定ファイルにくくりだしたくなるような内容はここにおいておく
